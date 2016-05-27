@@ -1,13 +1,23 @@
 <html>
 <head>
 
+
+
+
 </head>
 <body>
 <div> 
 The search page.
 </div>
 
-
+<form action="/search/" method = "POST"> 
+{% csrf_token %}
+Type in what you want your playlist to be about.<br>
+  <label for="songname">adjective/verb/noun </label>
+  <input type="text" name="songname"><br>
+  
+  <input type="submit" value="Submit">
+</form>
 
 
 

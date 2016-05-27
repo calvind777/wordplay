@@ -1,5 +1,6 @@
 from django.conf.urls import include, url
 from django.contrib import admin
+import search.views
 
 urlpatterns = [
     # Examples:
@@ -8,6 +9,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^search/', include('search.urls')),
-    url(r'^', include('search.urls')),
+    url(r'^$', search.views.home),
 
 ]
