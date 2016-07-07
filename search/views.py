@@ -83,8 +83,9 @@ def confirm(request):
                 song_title = song['result']['title']
                 song_artist = song['result']['primary_artist']['name']
                 song_info.append({'song_title':song_title, 'song_artist':song_artist})
-                youtube_song_info = requests.get("https://www.googleapis.com/youtube/v3/search?q="+song_title+" "+song_artist+"&key=AIzaSyB0GbnFvHpPMibTK1bkb2mPsiipzLCc8Uw&part=id").content
+                youtube_song_info = requests.get("https://www.googleapis.com/youtube/v3/search?q="+song_title+" "+song_artist+"&key=AIzaSyB0GbnFvHpPMibTK1bkb2mPsiipzLCc8Uw&part=id"+"&type=video").content
                 parsed_song_json = bytestojson(youtube_song_info)
+                print(parsed_song_json)
                 song_IDs_youtube.append(parsed_song_json['items'][0]['id']['videoId'])
             print(song_info)
             print(song_IDs_youtube)
