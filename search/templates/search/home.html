@@ -1,13 +1,14 @@
+{% load staticfiles %}
 <html>
 <head>
 
-
-
+<link rel="stylesheet" type="text/css" href="{% static 'search/style.css' %}" />
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
-<div> 
-The search page.
+<div id = "title"> 
+WordPlay
 </div>
 
 <form action="/search/" method = "POST"> 
