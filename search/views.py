@@ -28,7 +28,7 @@ def home(request):
    
     if (not request.GET.get('code') or not request.GET.get('state')) and not session:
         params = {'client_id': 'ZFtLPYv59ptIsi9zTpLCHbnmKZeSvmeTcOz-8ngiac-7ulG04LDgOlcXalpxDAU2',
-        'redirect_uri':'http://127.0.0.1:8000/',
+        'redirect_uri':'https://wordplay7.herokuapp.com/',
         'scope':'me',
         'state': 5,
         'response_type':'code'}
@@ -48,7 +48,7 @@ def home(request):
                 'client_secret':'3_58BaMlbFQBpBeVMFAeCl5az-_WQGVxVubINOavG33byHC10fBbwWBnL4mbvCmaZ0I0Icaec3LYETWJOq0ETw',
                 'grant_type':'authorization_code',
                 'client_id': 'ZFtLPYv59ptIsi9zTpLCHbnmKZeSvmeTcOz-8ngiac-7ulG04LDgOlcXalpxDAU2',
-                'redirect_uri': 'http://127.0.0.1:8000/',
+                'redirect_uri': 'https://wordplay7.herokuapp.com/',
                 'response_type':'code'
             }, decoder=bytestojson
             )
